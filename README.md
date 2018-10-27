@@ -6,11 +6,10 @@ PHP Docker images for WordPress development environments.
 
 Contains all extensions recommended by the WordPress [Hosting Handbook](https://make.wordpress.org/hosting/handbook/handbook/server-environment/).
 
-## Versions
+## PHP Versions
 
 * 7.3
 * 7.2
-* 5.6
 
 ## License
 
