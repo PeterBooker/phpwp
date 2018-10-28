@@ -10,6 +10,7 @@ Contains all extensions recommended by the WordPress [Hosting Handbook](https://
 
 * 7.3
 * 7.2
+* 5.6 (needs improvement)
 
 ## License
 
