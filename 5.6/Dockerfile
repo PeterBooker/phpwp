@@ -33,7 +33,8 @@ RUN apk add --no-cache --update \
     php5-dev \
     php5-exif \
     php5-mcrypt \
-    php5-opcache
+    php5-opcache \
+    mysql-client
 
 RUN apk add --update --no-cache autoconf g++ libtool make pcre-dev imagemagick imagemagick-dev \
     && pecl install imagick \
@@ -43,8 +44,16 @@ RUN apk add --update --no-cache autoconf g++ libtool make pcre-dev imagemagick i
 
 RUN apk del --purge \
     *-dev
+
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x wp-cli.phar \
+    && mv wp-cli.phar /usr/local/bin/wp
+
+ADD init.sh /usr/local/bin/
 	
 VOLUME /var/www/html
+
+ENTRYPOINT ["init.sh"]
 
 CMD ["php-fpm"]
 
