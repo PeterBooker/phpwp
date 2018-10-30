@@ -1,4 +1,4 @@
-FROM php:7.3.0RC3-fpm-alpine3.8
+FROM php:7.3.0RC4-fpm-alpine3.8
 
 RUN apk add --no-cache --virtual .build-deps \
     freetype-dev \
