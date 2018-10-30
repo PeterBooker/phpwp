@@ -10,4 +10,10 @@ if ! $(wp core is-installed --allow-root); then
     && wp widget delete search-2 recent-posts-2 recent-comments-2 archives-2 categories-2 meta-2 --allow-root
 fi
 
+cd /var/www/adminer
+if [ ! -e index.php ]; then
+    wget https://github.com/vrana/adminer/releases/download/v4.6.3/adminer-4.6.3.php \
+    && mv adminer-4.6.3.php ./index.php
+fi
+
 exec "$@"

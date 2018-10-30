@@ -60,6 +60,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 ADD init.sh /usr/local/bin/
 	
 VOLUME /var/www/html
+VOLUME /var/www/adminer
 
 ENTRYPOINT ["init.sh"]
 
