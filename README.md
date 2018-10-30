@@ -13,8 +13,9 @@ The resulting images are on [Docker Hub](https://hub.docker.com/r/peterbooker/ph
 
 ## PHP Versions
 
-* 7.3
+* 7.3 (RC4)
 * 7.2
+* 7.1
 * 5.6 (needs improvement)
 
 ## License
