@@ -4,7 +4,7 @@ PHP Docker images for WordPress development environments.
 
 ## Overview
 
-Contains all extensions recommended by the WordPress [Hosting Handbook](https://make.wordpress.org/hosting/handbook/handbook/server-environment/).
+Attempts to mirror recommendations by the WordPress [Hosting Handbook](https://make.wordpress.org/hosting/handbook/handbook/server-environment/).
 
 ## Docker Hub
 
