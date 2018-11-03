@@ -13,7 +13,7 @@ fi
 cd /var/www/adminer
 if [ ! -e index.php ]; then
     wget https://github.com/vrana/adminer/releases/download/v4.6.3/adminer-4.6.3.php \
-    && mv adminer-4.6.3.php ./index.php
+    && mv adminer-4.6.3.php ./adminer.php
 fi
 
 exec "$@"
