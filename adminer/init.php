@@ -6,7 +6,7 @@
 function adminer_object() {
 	class AdminerSoftware extends Adminer {
 		private $creds = array();
-		function init() {
+		function __constructor() {
 			$this->creds = array(
 				'host'     => getenv( 'MYSQL_HOST' ),
 				'database' => getenv( 'MYSQL_DATABASE' ),
@@ -14,17 +14,19 @@ function adminer_object() {
 				'pass'     => getenv( 'MYSQL_PASSWORD' ),
 			);
 		}
-
 		function name() {
-			return $this->creds['database'];
+			return '<a href="http://adminer.localhost/" id="h1">Adminer</a>';
 		}
 		function credentials() {
-			return array( $this->creds['host'], $this->creds['user'], $this->creds['pass'] );
+			return array( $this->creds['host'], $this->creds['user'], $this->creds['password'] );
+		}
+		function permanentLogin( $create = false ) {
+			return 'login_key';
 		}
 		function database() {
 			return $this->creds['database'];
 		}
-  }
-  return new AdminerSoftware;
+	}
+	return new AdminerSoftware;
 }
 include './adminer.php';
