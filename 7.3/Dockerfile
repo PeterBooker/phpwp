@@ -35,6 +35,12 @@ RUN apk add --no-cache --update \
     php7-fileinfo \
     mysql-client
 
+RUN apk add --no-cache autoconf g++ make \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
+    && apk del autoconf g++ make \
+    && rm -rf /tmp/* /var/cache/apk/*
+
 RUN apk add --update --no-cache autoconf g++ libtool make pcre-dev imagemagick imagemagick-dev \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
