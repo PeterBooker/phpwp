@@ -33,7 +33,6 @@ RUN apk add --no-cache --update \
     php7-dev \
     php7-exif \
     php7-fileinfo \
-    php7-redis \
     mysql-client
 
 RUN apk add --update --no-cache autoconf g++ libtool make pcre-dev imagemagick imagemagick-dev \
@@ -57,8 +56,6 @@ RUN apk del --purge \
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
-
-COPY adminer/init.php /var/www/adminer/index.php
 
 ADD init.sh /usr/local/bin/
 	

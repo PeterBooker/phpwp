@@ -33,7 +33,6 @@ RUN apk add --no-cache --update \
     php7-dev \
     php7-exif \
     php7-fileinfo \
-    php7-redis \
     mysql-client
 
 RUN apk add --update --no-cache autoconf g++ libtool make pcre-dev imagemagick imagemagick-dev \
